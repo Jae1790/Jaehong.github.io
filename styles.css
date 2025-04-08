@@ -1,0 +1,573 @@
+/* Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica", sans-serif;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Set Background Color */
+body {
+    background-color: #FEFFF5;
+}
+
+/* Header (Navigation Bar) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #FFF;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Logo - Single Green Dot */
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.green-dot {
+    color: #387631;
+}
+
+.brand {
+    font-style: italic;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+/* Navigation hover effects */
+nav ul li a:hover {
+    color: #ff5733;
+}
+
+/* Highlight active page */
+nav ul li a.active {
+    border-bottom: 2px solid black;
+}
+
+/* Hide Sections by Default */
+.hidden {
+    display: none;
+}
+
+/* Section transition effect */
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero Section */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 55vh;
+    overflow: hidden;  /* ?ÔøΩÔøΩ?ÔøΩÔøΩ ?ÔøΩÔøΩ?ÔøΩÔøΩÔø?? Ôø??Î™®ÔøΩ?? ?ÔøΩÔøΩÔø?? ?ÔøΩÔøΩ?ÔøΩÔøΩÔø?? Ï≤òÎ¶¨ */
+}
+
+/* Choose Perfume ?ÔøΩÔøΩ?ÔøΩÔøΩÔø?? hero Î∞∞Í≤Ω?ÔøΩÔøΩ */
+#choose-perfume .hero {
+    background-color: #FEF4DB;  /* ?ÔøΩÔøΩÎ≤†Ïù¥Ôø?? */
+}
+
+/* Apply Perfume ?ÔøΩÔøΩ?ÔøΩÔøΩÔø?? hero Î∞∞Í≤Ω?ÔøΩÔøΩ */
+#apply-perfume .hero {
+    background-color: #FEEBDB;  /* ?ÔøΩÔøΩ?ÔøΩÔøΩ?ÔøΩÔøΩ?ÔøΩÔøΩ */
+}
+
+/* Hero Image */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    min-height: 100%;  /* ?ÔøΩÔøΩÎØ∏ÔøΩ??Ôø?? ?ÔøΩÔøΩ?ÔøΩÔøΩ Ôø??Ôø?? ?ÔøΩÔøΩÍ∏∞Îßå?ÔøΩÔøΩ */
+    min-width: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    object-fit: cover;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+/* Hero Text */
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    text-align: left;
+    padding: 120px 80px
+}
+
+.hero-text h1 {
+    font-size: 46px;
+    color: black;
+    line-height: 1.3;
+}
+
+.hero-text strong {
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Explore Section */
+.explore {
+    text-align: center;
+    padding: 240px 100px;
+}
+
+.explore h2 {
+    font-size: 24px;
+}
+
+.explore p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Grid Section */
+.grid-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Choose Perfume ?ÔøΩÔøΩ?ÔøΩÔøΩÔø?? Grid Î∞∞Í≤Ω?ÔøΩÔøΩ */
+#choose-perfume .grid-section {
+    background-color: #FEF4DB; /* ?ÔøΩÔøΩÎ≤†Ïù¥Ôø?? */
+}
+
+/* Apply Perfume ?ÔøΩÔøΩ?ÔøΩÔøΩÔø?? Grid Î∞∞Í≤Ω?ÔøΩÔøΩ */
+#apply-perfume .grid-section {
+    background-color: #FEEBDB; /* ?ÔøΩÔøΩ?ÔøΩÔøΩ?ÔøΩÔøΩ */
+}
+
+/* Grid Item */
+.grid-item {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.grid-item img:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Grid Item Images */
+.grid-item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.grid-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Quote Section */
+.quote {
+    text-align: center;
+    padding: 240px 100px;
+    font-size: 22px;
+    color: black;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 40px;
+    display: flex;
+    justify-content: flex-end; /* Aligns content to the right */
+    padding-right: 50px;
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Footer Row */
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin: 5px 0;
+}
+
+/* Footer Labels */
+.footer-label {
+    font-weight: bold;
+    text-align: left;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* Add space between icon and text */
+.footer-label i {
+    margin-right: 8px;
+}
+
+/* Footer Values */
+.footer-value {
+    text-align: right;
+    flex: 2;
+}
+
+/* Link Styling */
+.footer-value a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-value a:hover {
+    color: #ff5733;
+}
+
+/* Popup Overlay (Blurry Background) */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Slight dark overlay */
+    backdrop-filter: blur(8px); /* iOS-style blur effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Popup Container */
+.popup {
+    background: white;
+    width: 320px;
+    padding: 25px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Popup Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Close Button (Top Right X) */
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: black;
+}
+
+/* Popup Text */
+.popup-content p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.phone-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007aff; /* iOS blue */
+    margin: 10px 0;
+}
+
+/* Button (OK) */
+.popup button {
+    width: 100%;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.popup button:hover {
+    background-color: #005ecb;
+}
+
+/* Hide Popup Initially */
+.hidden {
+    display: none;
+}
+
+
+/* Back Button */
+.back-button {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px;
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
+}
+
+.back-button:hover {
+    color: #ff5733;
+}
+
+
+/* Fragrance Details Page */
+#fragrance-details .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#fragrance-details .hero-image img {
+    max-width: 700px;
+}
+
+#fragrance-details .hero-text {
+    padding-left: 0;
+    max-width: 600px;
+    text-align: center;
+}
+
+#fragrance-details .grid-section {
+    margin-bottom: 200px;
+}
+
+#fragrance-details .types.explain {
+    background-color: #FEFFF5;   
+    padding: 150px;               
+    text-align: center;
+}
+#fragrance-details .types.explain h1 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+/* Two Column Hero (Store Perfume) */
+.hero.two-column {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    background-color: #e0f0d9;
+}
+
+#store-perfume .hero-image {
+    flex: 1;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+#ideal-storage .hero-image img {
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+#store-perfume .hero-text {
+    flex: 1;
+    padding: 120px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    background-color: #e0f0d9;
+}
+
+#store-perfume .hero-text h1 {
+    font-size: 46px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#store-perfume .hero-text p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Store Perfume Grid Section */
+#store-perfume .grid-section {
+    padding: 80px 50px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background-color: #e0f0d9;
+}
+
+#store-perfume .grid-item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+#store-perfume .grid-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+/* Ideal Storage Conditions Section */
+#ideal-storage .hero {
+    background-color: #e0f0d9; /* Í∏∞Ï°¥Í≥? ?èô?ùº?ïú Î∞∞Í≤Ω?Éâ */
+}
+
+#ideal-storage .hero-image img {
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+
+#ideal-storage .hero-text {
+    padding: 80px 80px 40px;
+    text-align: left;
+}
+
+#ideal-storage .grid-section {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    background-color: #e0f0d9; /* Í∏∞Ï°¥Í≥? ?èô?ùº?ïú Î∞∞Í≤Ω?Éâ */
+}
+
+#ideal-storage .grid-item img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+#ideal-storage .grid-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* Responsive Store Perfume Layout */
+@media (max-width: 768px) {
+    .hero.two-column {
+        flex-direction: column;
+    }
+
+    #store-perfume .grid-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #store-perfume .grid-item img {
+        width: 300px;
+        height: auto;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .hero-text {
+        text-align: center;
+        padding: 0;
+    }
+
+    .grid-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-item img {
+        width: 400px;
+        height: auto;
+    }
+
+    
+}
